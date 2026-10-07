@@ -3,6 +3,7 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     private float speed = 10f; //public 공룡(공용)
+    public GameObject bulletPrefab;
     int[] scores = new int[5];
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -27,5 +28,12 @@ public class PlayerController : MonoBehaviour
         
         Vector3 direction = new Vector3(x, y, 0);
         transform.position += direction.normalized * speed * Time.deltaTime;
+        
+        if(Input.GetKeyDown(KeyCode.Z))
+        {
+            GameObject bullet = Instantiate(bulletPrefab);
+            bullet.transform.position = transform.position;
+            bullet.GetComponent<Rigidbody2D>().AddForce(Vector2.up);
+        }    
     }
 }
