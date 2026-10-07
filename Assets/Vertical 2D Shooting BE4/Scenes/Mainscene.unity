@@ -303,6 +303,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &465519929 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3306745669965388601, guid: b2fa18d83920e3445b95e641992d7e96, type: 3}
+  m_PrefabInstance: {fileID: 1054230944864965403}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &671686104
 GameObject:
   m_ObjectHideFlags: 0
@@ -369,7 +374,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_MaskInteraction: 0
   m_Sprite: {fileID: -2311659948842064771, guid: 6520dda4a70dfbf40a55b7af39ecda4e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -409,6 +414,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63d5e0cb015038442a6211c694d48b7d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerController
+  bulletPrefab: {fileID: 465519929}
+  bulletSpeed: 200
 --- !u!50 &671686108
 Rigidbody2D:
   serializedVersion: 5
@@ -500,7 +507,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_MaskInteraction: 0
   m_Sprite: {fileID: -8461514266414155272, guid: b9889a1e8a548d844b46bee7287797f8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -592,7 +599,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_MaskInteraction: 0
   m_Sprite: {fileID: 656988019031298925, guid: b9889a1e8a548d844b46bee7287797f8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -737,6 +744,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: -3853900315991760761, guid: 5547e92425a5b584ba72bba3566474f0, type: 3}
+    - target: {fileID: 3071091065336970532, guid: b2fa18d83920e3445b95e641992d7e96, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3071091065336970532, guid: b2fa18d83920e3445b95e641992d7e96, type: 3}
       propertyPath: m_WasSpriteAssigned
       value: 1
