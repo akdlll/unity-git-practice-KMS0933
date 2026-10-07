@@ -4,6 +4,7 @@ public class PlayerController : MonoBehaviour
 {
     private float speed = 10f; //public 공룡(공용)
     public GameObject bulletPrefab;
+    public float bulletSpeed = 200f;
     int[] scores = new int[5];
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -33,7 +34,7 @@ public class PlayerController : MonoBehaviour
         {
             GameObject bullet = Instantiate(bulletPrefab);
             bullet.transform.position = transform.position;
-            bullet.GetComponent<Rigidbody2D>().AddForce(Vector2.up);
+            bullet.GetComponent<Rigidbody2D>().AddForce(Vector2.up * bulletSpeed);
         }    
     }
 }
